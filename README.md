@@ -35,7 +35,7 @@ const orm = jOrm.Fabric('psql', {
 });
 ```
 
-### .query()
+#### .query()
 
 Return Query interface of Type
 
@@ -49,10 +49,6 @@ orm.query().where({email: 'rastopyr@gmail.com'}).order('id').limit(10)
 #### .exec()
 
 Execute query, and return Promise object.
-
-### .query()
-
-Return Query interface of Type
 
 **Example:**
 ```javascript
