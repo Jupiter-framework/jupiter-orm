@@ -2,8 +2,6 @@
 
 ## API
 
-### Module
-
 #### .typeRegister(name, module)
 
 Register new type of adapter.
@@ -41,6 +39,25 @@ const orm = jOrm.Fabric('psql', {
 
 Return Query interface of Type
 
+**Example:**
+```javascript
+const orm = jOrm.Fabric('psql', {});
+
+orm.query().where({email: 'rastopyr@gmail.com'}).order('id').limit(10)
+```
+
 #### .exec()
 
 Execute query, and return Promise object.
+
+### .query()
+
+Return Query interface of Type
+
+**Example:**
+```javascript
+const orm = jOrm.Fabric('psql', {});
+
+orm.query().where({email: 'rastopyr@gmail.com'}).exec()
+  .then(console.log.bind(console)) // consoled result of query
+```
