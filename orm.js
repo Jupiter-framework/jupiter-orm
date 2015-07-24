@@ -1,7 +1,7 @@
 let registeredTypes = [];
 
-export function typeRegister(name, module) {
-    return setRegisterType(name,module, registeredTypes);
+export function typeRegister(name, ormInterface) {
+    return setRegisterType(name, ormInterface, registeredTypes);
 }
 
 function setRegisterType(name, type, register){

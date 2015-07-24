@@ -3,7 +3,7 @@ import promiseES6 from 'es6-promise';
 
 export default{
     getOrm: function (options) {
-        let Driver = function () {
+        let OrmInterface = function () {
             let adapter = {};
 
             adapter.setCollection = stub.stub();
@@ -28,6 +28,6 @@ export default{
             this.exec.returns(new promiseES6.Promise(function(){}));
         };
 
-        return new Driver();
+        return new OrmInterface();
     }
 }
