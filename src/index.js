@@ -18,5 +18,5 @@ function getRegisterType(name, register){
 }
 
 export function Fabric(name, options){
-    return getType(name).getOrm(options);
+    return getType(name).Fabric(options);
 }
